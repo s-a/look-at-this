@@ -1,0 +1,21 @@
+{
+  "author": "Stephan Ahlf",
+  "preferGlobal": false,
+  "name": "look-at-this",
+  "description": "A very simple collection of social sharing channels",
+  "version": "0.1.3",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "",
+    "load-grunt-tasks": ""
+  }
+}

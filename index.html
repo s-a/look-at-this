@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="social-icon.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+
+
+<body>
+
+	<script type="text/html" id="social_icon_template">
+	  <% for ( var i = 0; i < icons.length; i++ ) { %>
+		<a class="social-share-button paper-shadow-bottom-z-1" href="#">
+	 		<div class="social-icon social-icon-<%=icons[i].name%>"></div>
+		</a>
+	  <% } %>
+	</script>
+
+	<h1>Social Share Buttons</h1>
+	<div id="social-icons"></div>
+
+    <script type="text/javascript" src="social-icon-list.js"></script>
+	<script type="text/javascript" src="social-icon.js"></script>
+
+</body>
+</html>

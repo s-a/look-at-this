@@ -1,0 +1,1 @@
+window.socialIcons={};window.socialIcons.list=["delicious","digg","disqus","dribbble","email","facebook","flattr","flickr","geeklist","github","googleplus","hackernews","instagram","linkedin","pinterest","pocket","posterous","reddit","stumbleupon","tumblr","twitter","xing"];

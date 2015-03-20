@@ -6,10 +6,10 @@
   "version": "0.1.5",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/s-a/look-at-this"
   },
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha"
   },
   "engines": {
     "node": ">=0.8.0"

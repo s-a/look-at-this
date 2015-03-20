@@ -3,7 +3,10 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg : grunt.file.readJSON('package.json'),
 		jshint: {
-			beforeconcat: ['./social-icon.js']
+			beforeconcat: ['./social-icon.js'],
+			options:{
+				jshintrc:true
+			}
 		},
 		clean: {
 		 	build: {
@@ -92,7 +95,7 @@ module.exports = function(grunt) {
 	// Default Production Build task(s).
 	grunt.registerTask(
 		'default', [
-			//'jshint',
+			'jshint',
 			'clean:build',
 			'concat',
 			'uglify',

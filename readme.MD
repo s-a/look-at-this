@@ -20,7 +20,7 @@ Just another social sharing plugin. Yeah o.O ... but here are the pros!
  - Take a look at this [online demo example](https://s-a.github.io/look-at-this/dist)
 
 
-## Share url, title and so on?
+## Change share url, title and so on?
 By default the settings are stored like this:
 ```
 	if (!window.socialIcons.setup){
@@ -31,6 +31,10 @@ By default the settings are stored like this:
 	}
 ```
 So you can set them to what you need.
+
+
+## Responsive showcase
+[![Responsive showcase](responsive-showcase.gif)](https://s-a.github.io/look-at-this/dist)
 
 
 ## How to add a brand?

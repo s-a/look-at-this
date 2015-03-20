@@ -7,10 +7,10 @@
 ## About
 Just another social sharing plugin. Yeah o.O ... but here are the pros!
 
- - It is realy realy lightweight. (You only need a css and js file)
- - It is responsive.
- - You can customize the brand link button template with ease!
- - It works as stand alone. No jQuery or other libs needed.
+ - It is realy realy ***lightweight***. (You only need a css and js file)
+ - It is ***responsive***.
+ - ***Customizable link button template***.
+ - It works as ***standalone***. No jQuery or other libs needed.
 
 
 ## Installation

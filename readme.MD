@@ -20,6 +20,19 @@ Just another social sharing plugin. Yeah o.O ... but here are the pros!
  - Take a look at this [online demo example](https://s-a.github.io/look-at-this/dist)
 
 
+## Share url, title and so on?
+By default the settings are stored like this:
+```
+	if (!window.socialIcons.setup){
+		window.socialIcons.setup = {
+			"title":document.title,
+			"url":location.href
+		};
+	}
+```
+So you can set them to what you need.
+
+
 ## How to add a brand?
 
  - Install https://github.com/s-a/scream-js

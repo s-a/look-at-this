@@ -11,6 +11,7 @@ Just another social sharing plugin. Yeah o.O ... but here are the pros!
  - It is ***responsive***.
  - ***Customizable link button template***.
  - It works as ***standalone***. No jQuery or other libs needed.
+ - It respects the users ***privacy***.
 
 
 ## Installation

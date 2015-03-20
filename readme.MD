@@ -30,7 +30,7 @@ By default the settings are stored like this:
 		};
 	}
 ```
-So you can set them to what you need.
+So you can set them to what you need. This informations are masked per social network in the url property at [.scream.js](https://github.com/s-a/look-at-this/blob/master/ico/.scream.js#L22)
 
 
 ## Responsive showcase

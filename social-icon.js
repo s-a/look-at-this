@@ -68,23 +68,26 @@
     		var cfg = getIconSetup(brandName);
 
     		if (cfg.url){
-    			var url = cfg.url;
-
-				var pattern = /\{\{([^}]+)\}\}/g;
-				var match;
-				while ((match = pattern.exec(cfg.url)) !== null){
-					var parmName = match[1];
-					var parmValue = window.socialIcons.setup[parmName];
-					if (!parmValue){
-						parmValue = "";
+    			if (brandName === "github"){
+    				btn.href = window.socialIcons.setup.githubUrl;
+    			} else {
+	    			var url = cfg.url;
+					var pattern = /\{\{([^}]+)\}\}/g;
+					var match;
+					while ((match = pattern.exec(cfg.url)) !== null){
+						var parmName = match[1];
+						var parmValue = window.socialIcons.setup[parmName];
+						if (!parmValue){
+							parmValue = "";
+						}
+						url = url.replace("{{" + parmName + "}}", encodeURIComponent(parmValue));
 					}
-					url = url.replace("{{" + parmName + "}}", encodeURIComponent(parmValue));
-				}
 
-    			btn.href = url;
-    			//btn.onclick = onShareButtonClickEvent;
+	    			btn.href = url;
+	    			//btn.onclick = onShareButtonClickEvent;
 
-    		} else {
+    			}
+    		} else { 
     			console.error("no valid share url found", cfg);
     		}
     	}
@@ -94,7 +97,9 @@
 	if (!window.socialIcons.setup){
 		window.socialIcons.setup = {
 			"title":document.title,
-			"url":location.href
+			"url":location.href,
+			"subject":"Look at this my friend",
+			"body":"Take a look at this website. It is awesome! " + location.href
 		};
 	}
 

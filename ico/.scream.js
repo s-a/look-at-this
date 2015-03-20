@@ -52,7 +52,8 @@ var config = {
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#ccc"
+		color:"#ccc",
+		url : "mailto:?subject={{subject}}&body={{body}}"
 	},
 	"facebook-128.png" : {							// alias
 		filename : __dirname + "/facebook-128.png",				// original filename
@@ -60,7 +61,8 @@ var config = {
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#3B5998"
+		color:"#3B5998",
+		url : "https://www.facebook.com/sharer/sharer.php?u={{url}}&t={{title}}"
 	},
 	"flattr-128.png" : {							// alias
 		filename : __dirname + "/flattr-128.png",				// original filename
@@ -68,31 +70,33 @@ var config = {
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#F67C1A"
+		color:"#F67C1A",
+		url: "https://flattr.com/submit/auto?url={{url}}"
 	},
-	"flickr-128.png" : {							// alias
+/*	"flickr-128.png" : {							// alias
 		filename : __dirname + "/flickr-128.png",				// original filename
 		sprite: "social-icon",										// determines if the image should be included within specified sprite sheet
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
 		color:"#0063DB"
-	},
-	"geeklist-128.png" : {							// alias
+	},*/
+	/*"geeklist-128.png" : {							// alias
 		filename : __dirname + "/geeklist-128.png",				// original filename
 		sprite: "social-icon",										// determines if the image should be included within specified sprite sheet
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
 		color:"#8CC63E"
-	},
+	},*/
 	"github-128.png" : {							// alias
-		filename : __dirname + "/github-128.png",				// original filename
+		filename : __dirname + "/github-128-black.png",				// original filename
 		sprite: "social-icon",										// determines if the image should be included within specified sprite sheet
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#4183C4"
+		
+		url : "G" 
 	},
 	"googleplus-128.png" : {							// alias
 		filename : __dirname + "/googleplus-128.png",				// original filename
@@ -100,7 +104,8 @@ var config = {
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#D14836"
+		color:"#D14836",
+		url : "https://plus.google.com/share?url={{url}}"
 	},
 	"hackernews-128.png" : {							// alias
 		filename : __dirname + "/hackernews-128.png",				// original filename
@@ -108,23 +113,27 @@ var config = {
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#FF6600"
+		color:"#FF6600",
+		url : "https://news.ycombinator.com/submitlink?u={{url}}&t={{title}}"
 	},
+	/*
 	"instagram-128.png" : {							// alias
 		filename : __dirname + "/instagram-128.png",				// original filename
 		sprite: "social-icon",										// determines if the image should be included within specified sprite sheet
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#3F729B"
-	},
+		color:"#3F729B",
+
+	},*/
 	"linkedin-128.png" : {							// alias
 		filename : __dirname + "/linkedin-128.png",				// original filename
 		sprite: "social-icon",										// determines if the image should be included within specified sprite sheet
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#007FB1"
+		color:"#007FB1",
+		url : "http://www.linkedin.com/shareArticle?mini=true&url={{url}}&title={{title}}&source={{provider}}"
 	},
 	"pinterest-128.png" : {							// alias
 		filename : __dirname + "/pinterest-128.png",				// original filename
@@ -132,23 +141,26 @@ var config = {
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#CB2027"
+		color:"#CB2027",
+		url : "http://pinterest.com/pin/create/bookmarklet/?media={{media}}&url={{url}}&is_video=false&description={{body}}"
 	},
-	"pocket-128.png" : {							// alias
+	/*"pocket-128.png" : {							// alias
 		filename : __dirname + "/pocket-128.png",				// original filename
 		sprite: "social-icon",										// determines if the image should be included within specified sprite sheet
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#EF4056"
-	},
+		color:"#EF4056",
+
+	},*/
 	"posterous-128.png" : {							// alias
 		filename : __dirname + "/posterous-128.png",				// original filename
 		sprite: "social-icon",										// determines if the image should be included within specified sprite sheet
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"red"
+		color:"red",
+		url :"http://posterous.com/share?linkto={{url}}"
 	},
 	"reddit-128.png" : {							// alias
 		filename : __dirname + "/reddit-128.png",				// original filename
@@ -156,7 +168,8 @@ var config = {
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#FF4500"
+		color:"#FF4500",
+		url : "http://reddit.com/submit?url={{url}}&title={{title}}"
 	},
 	"stumbleupon-128.png" : {							// alias
 		filename : __dirname + "/stumbleupon-128.png",				// original filename
@@ -164,7 +177,8 @@ var config = {
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#EB4924"
+		color:"#EB4924",
+		url : "http://www.stumbleupon.com/submit?url={{url}}&title={{title}}"
 	},
 	"tumblr-128.png" : {							// alias
 		filename : __dirname + "/tumblr-128.png",				// original filename
@@ -172,7 +186,8 @@ var config = {
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#2C4762"
+		color:"#2C4762",
+		url: "http://www.tumblr.com/share/link?url={{url}}&name={{title}}&description={{body}}"
 	},
 	"twitter-128.png" : {							// alias
 		filename : __dirname + "/twitter-128.png",				// original filename
@@ -180,7 +195,8 @@ var config = {
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#00ACED"
+		color:"#00ACED",
+		url : "http://www.twitter.com/share?url={{url}}&text={{body}}"
 	},
 	"xing-128.png" : {							// alias
 		filename : __dirname + "/xing-128.png",				// original filename
@@ -188,7 +204,8 @@ var config = {
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#006567"
+		color:"#006567",
+		url: "https://www.xing.com/app/user?op=share;url={{url}}"
 	}}
 };
 

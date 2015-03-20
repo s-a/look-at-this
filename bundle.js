@@ -11,7 +11,7 @@ for (var x in cfg.images) {
 	count++;
 }
 
-var onePercent = (100/count)+0.25;
+var onePercent = (100/count)+0.4;
 var percent= onePercent*-1;
 var icons = [];
 for (var fn in cfg.images) {
@@ -20,7 +20,9 @@ for (var fn in cfg.images) {
 	percent += onePercent;
 	css.push(".social-icon-"+cls+"{");
 	css.push("	background-position-y:"+percent+"%;");
-	css.push("	background-color:"+ (cfg.images[fn].color || "yellow") + ";");
+	if (cfg.images[fn].color){
+		css.push("	background-color:"+ (cfg.images[fn].color || "yellow") + ";");
+	}
 	css.push("}");
 
 	var setup = cfg.images[fn];

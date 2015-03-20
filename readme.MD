@@ -7,19 +7,14 @@
 ## About
 Just another social sharing plugin. Yeah o.O ... but here are the pros!
 
- - It is realy lightweight. (You only need a css and js file)
+ - It is realy realy lightweight. (You only need a css and js file)
+ - It is responsive.
  - You can customize the brand link button template with ease!
  - You can add new brands.
 
 
 ## Installation
-``` html
-	<script type="text/javascript" src="look-at-this.js"></script>
-	<link rel="stylesheet" type="text/css" href="look-at-this.css">
-```
-
-## Online Demo example
-https://s-a.github.io/look-at-this/dist
+Take a look at this [online demo example](https://s-a.github.io/look-at-this/dist)
 
 
 ## How to a brand?

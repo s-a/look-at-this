@@ -3,7 +3,7 @@
   "preferGlobal": false,
   "name": "look-at-this",
   "description": "A very simple collection and lib of social sharing channels",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "repository": {
     "type": "git",
     "url": ""
@@ -23,6 +23,8 @@
     "grunt-contrib-clean":"",
     "grunt-contrib-copy":"",
     "grunt-contrib-uglify":"",
-    "grunt-contrib-jshint":""
+    "grunt-contrib-jshint":"",
+    "grunt-contrib-concat": "0.3.0",
+    "grunt-contrib-cssmin": "0.9.0"
   }
 }

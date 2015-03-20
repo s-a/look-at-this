@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 		},
 		clean: {
 		 	build: {
-				src: ['./dist/*'],
+				src: ['./dist/sprite__social-icon.png', './dist/look-at-this.min.js', './dist/look-at-this.min.css', './dist/look-at-this.js', './dist/look-at-this.css', '!./dist/index.html'],
 				options: { force: true }
 		 	}
 		},
@@ -49,28 +49,54 @@ module.exports = function(grunt) {
 			my_target: {
 				files: {
 					'./dist/look-at-this.min.js': [
-						"./social-icon.js"
+						"./dist/look-at-this.js"
 					]
 				}
 			}
-		}
-
+		},
+		concat: {
+			options: {
+			  separator: '\n',
+			},
+			dist_js: {
+				src: [
+					"./social-icon-list.js", 
+					"./social-icon.js",
+				],
+				dest: './dist/look-at-this.js',
+			},
+			dist_css: {
+				src: [
+					"./social-icon.css", 
+					"./main.css",
+				],
+				dest: './dist/look-at-this.css',
+			},
+		},
+		cssmin: {
+			combine: {
+				files: {
+					'./dist/look-at-this.min.css': [
+						'./dist/look-at-this.css'
+					]
+				}
+			}
+		},
 	});
 
 
 	// Production Build Tools
-	grunt.loadNpmTasks('grunt-bump');
-	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	
+	require('load-grunt-tasks')(grunt);
+
+
 	// Default Production Build task(s).
 	grunt.registerTask(
 		'default', [
 			//'jshint',
 			'clean:build',
+			'concat',
 			'uglify',
+			'cssmin',
 			'copy',
 			'bump'
 		]

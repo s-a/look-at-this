@@ -11,7 +11,7 @@ for (var x in cfg.images) {
 	count++;
 }
 
-var onePercent = (100/count)+0.2;
+var onePercent = (100/count)+0.25;
 var percent= onePercent*-1;
 var icons = [];
 for (var fn in cfg.images) {

@@ -27,13 +27,14 @@ var config = {
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#14589E"
+		color:"#14589E",
+		url : "http://digg.com/tools/diggthis/confirm?url={{url}}",
 	},
-	"disqus-128.png" : {							// alias
-		filename : __dirname + "/disqus-128.png",				// original filename
-		sprite: "social-icon",										// determines if the image should be included within specified sprite sheet
-		batch : [											// image processing shell scripts with paramters
-			"-resize", "x128"								// -size width[xheight][+offset]
+	/*"disqus-128.png" : {							
+		filename : __dirname + "/disqus-128.png",	
+		sprite: "social-icon",						
+		batch : [									
+			"-resize", "x128"						
 		],
 		color:"#2E9FFF"
 	},
@@ -44,7 +45,7 @@ var config = {
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
 		color:"#EA4C89"
-	},
+	},*/
 	"email-128.png" : {							// alias
 		filename : __dirname + "/email-128.png",				// original filename
 		sprite: "social-icon",										// determines if the image should be included within specified sprite sheet

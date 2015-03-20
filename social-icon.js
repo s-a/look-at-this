@@ -42,6 +42,11 @@
 		throw "Icon setup " + name + " not found";
 	};
 
+	var onShareButtonClickEvent = function() {
+		window.open(this.href);
+		return false;
+	};
+
 
 	//?v=5&provider={your-company}&noui&jump=close&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)
 
@@ -73,10 +78,11 @@
 					if (!parmValue){
 						parmValue = "";
 					}
-					url = url.replace("{{" + parmName + "}}", encodeURIComponent(parmValue))
+					url = url.replace("{{" + parmName + "}}", encodeURIComponent(parmValue));
 				}
-    			debugger;
+
     			btn.href = url;
+    			//btn.onclick = onShareButtonClickEvent;
 
     		} else {
     			console.error("no valid share url found", cfg);

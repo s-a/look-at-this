@@ -7,13 +7,18 @@
 ## About
 Just another social sharing plugin. Yeah o.O ... but here are the pros!
 
- - It is lightweight. (You only need a css and js file)
+ - It is realy lightweight. (You only need a css and js file)
  - You can customize the brand link button template with ease!
  - You can add new brands.
- - 
 
 
-## Online Demo
+## Installation
+``` html
+	<script type="text/javascript" src="look-at-this.js"></script>
+	<link rel="stylesheet" type="text/css" href="look-at-this.css">
+```
+
+## Online Demo example
 https://s-a.github.io/look-at-this/dist
 
 
@@ -29,11 +34,12 @@ https://s-a.github.io/look-at-this/dist
 
 ## Contributing
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+ - Fork it!
+ - Create your feature branch: `git checkout -b my-new-feature`
+ - Commit your changes: `git commit -am 'Add some feature'`
+ - Run the tests: `npm test`
+ - Push to the branch: `git push origin my-new-feature`
+ - Submit a pull request :D
 
 
 ## License

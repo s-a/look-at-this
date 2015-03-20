@@ -2,7 +2,7 @@
   "author": "Stephan Ahlf",
   "preferGlobal": false,
   "name": "look-at-this",
-  "description": "A very simple collection of social sharing channels",
+  "description": "A very simple collection and lib of social sharing channels",
   "version": "0.1.2",
   "repository": {
     "type": "git",
@@ -18,6 +18,11 @@
     "mocha": "",
     "should": "",
     "grunt": "",
-    "load-grunt-tasks": ""
+    "load-grunt-tasks": "",
+    "grunt-bump":"",
+    "grunt-contrib-clean":"",
+    "grunt-contrib-copy":"",
+    "grunt-contrib-uglify":"",
+    "grunt-contrib-jshint":""
   }
 }

@@ -1,53 +1,80 @@
-module.exports = function (grunt) {
-  
-
+var projectVersion = require("./package.json").version;
+module.exports = function(grunt) {
 	grunt.initConfig({
-	    oversprite: {
-	        // This is are multitask, you can create multiple sprite generators buy copying all 
-	        // object with other name, see grunt.js docs for details
-	        all: {
-	            // List of sprites to create
-	            spritelist: [
-	                {
-	                    // List of images to add to sprite
-	                    'src': [ 'icons/500px/500px-128.png' ],
-	                    // Address of target image
-	                    'dest': 'publish/sprite.jpg',
-	                    // OPTIONAL: Image placing algorithm: top-down, left-right, diagonal, alt-diagonal, binary-tree
-	                    'algorithm': 'binary-tree',
-	                    // OPTIONAL: Padding between imagesm
-	                    'padding': 1,
-	                    // OPTIONAL: Rendering engine: auto, canvas, gm
-	                    'engine': 'gm',
-	                    // OPTIONAL: Preferences for resulting image
-	                    'exportOpts': {
-	                        // Image formst (buy default will try to use dest extension)
-	                        'format': 'jpg',
-	                        // Quality of image (gm only)
-	                        'quality': 90
-	                    }
-	                }
-	            ],
-	            // List of css to replace images
-	            csslist: [
-	                {
-	                    // Source css file
-	                    'src':  'style.css',
-	                    // Target css file, can be the same as source
-	                    'dest': 'style.sprite.css',
-	                    // OPTIONAL: Normalization string. Will be added to css dir path, before paths in css. 
-	                    // Use if you move the css and paths to images aren't resolving correctly now.
-	                    'base': '../blocks/'
-	                }
-	            ]
-	        }
-	    }
+		pkg : grunt.file.readJSON('package.json'),
+		jshint: {
+			beforeconcat: ['./social-icon.js']
+		},
+		clean: {
+		 	build: {
+				src: ['./dist/*'],
+				options: { force: true }
+		 	}
+		},
+		bump: {
+			options: {
+				files: ['package.json', 'bower.json'], 
+				updateConfigs: [],
+				commit: false,
+				commitMessage: 'Release v%VERSION%',
+				commitFiles: ['package.json', 'bower.json'], // '-a' for all files
+				createTag: true,
+				tagName: 'v%VERSION%',
+				tagMessage: 'Version %VERSION%',
+				push: false,
+				pushTo: '',
+				gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d' // options to use with '$ git describe'
+			}
+		},
+
+		copy: {
+			default: {
+				files: [
+					{
+						expand: true,
+						src: ["sprite__social-icon.png"],
+						dest: "./dist",
+						flatten: false
+					}
+				]
+			}
+		},
+
+		uglify: {
+			options: {
+				beautify: false,
+				mangle: true,
+				preserveComments: false
+			},
+			my_target: {
+				files: {
+					'./dist/look-at-this.min.js': [
+						"./social-icon.js"
+					]
+				}
+			}
+		}
 
 	});
 
-  	// Load in `grunt-spritesmith`
-	// Production Build Tools from package.json
-	require('load-grunt-tasks')(grunt);
 
-	grunt.registerTask("sprite", ['spriteGenerator']);
+	// Production Build Tools
+	grunt.loadNpmTasks('grunt-bump');
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	
+	// Default Production Build task(s).
+	grunt.registerTask(
+		'default', [
+			//'jshint',
+			'clean:build',
+			'uglify',
+			'copy',
+			'bump'
+		]
+	);
+
+	grunt.registerTask("build", ['default']);
 };

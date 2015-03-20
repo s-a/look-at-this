@@ -19,7 +19,7 @@ Just another social sharing plugin. Yeah o.O ... but here are the pros!
  - Take a look at this [online demo example](https://s-a.github.io/look-at-this/dist)
 
 
-## How to a brand?
+## How to add a brand?
 
  - Install https://github.com/s-a/scream-js
  - Add a file to ```/ico``` folder

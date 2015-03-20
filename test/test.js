@@ -1,5 +1,5 @@
 var fs = require("fs");
-var cfg = require("./ico/.scream.js");
+var cfg = require("./../ico/.scream.js");
 require('should');
 
 describe('valid build file config', function(){

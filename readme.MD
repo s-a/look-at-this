@@ -9,7 +9,7 @@ Just another social sharing plugin. Yeah o.O ... but here are the pros!
 
  - It is realy realy ***lightweight***. (You only need a css and js file)
  - It is ***responsive***.
- - ***Customizable link button template***.
+ - ***Customizable link button CSS and template***.
  - It works as ***standalone***. No jQuery or other libs needed.
  - It respects the users ***privacy***.
 
@@ -45,4 +45,4 @@ MIT and GPL
 
 ## Credits
 
-Icons Pack by [Dan Leech](https://github.com/danleech) at [Simple Icons](https://github.com/danleech/simple-icons)
+Icon Pack by [Dan Leech](https://github.com/danleech) at [Simple Icons](https://github.com/danleech/simple-icons)

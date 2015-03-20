@@ -21,10 +21,10 @@ for (var fn in cfg.images) {
 	css.push(".social-icon-"+cls+"{");
 	css.push("	background-position-y:"+percent+"%;");
 	css.push("	background-color:"+ (cfg.images[fn].color || "yellow") + ";");
-
 	css.push("}");
 
-	icons.push(cls);
+	var setup = cfg.images[fn];
+	icons.push({name:cls, color:setup.color, url: setup.url});
 }
 
 

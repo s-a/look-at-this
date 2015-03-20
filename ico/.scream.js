@@ -13,12 +13,13 @@ var config = {
 		}
 	},
 	images : {	"delicious-128.png" : {							// alias
-		filename : __dirname + "/delicious-128.png",				// original filename
+		filename : __dirname + "/delicious.png",				// original filename
 		sprite: "social-icon",										// determines if the image should be included within specified sprite sheet
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
-		color:"#3274D1"
+		color:"#3274D1",
+		url : "https://delicious.com/save?v=5&provider={{provider}}&noui&jump=close&url={{url}}&title={{title}}",
 	},
 	"digg-128.png" : {							// alias
 		filename : __dirname + "/digg-128.png",				// original filename

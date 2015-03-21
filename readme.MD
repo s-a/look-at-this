@@ -12,6 +12,7 @@ Just another social sharing plugin. Yeah o.O ... but here are the pros!
  - ***Customizable link button CSS and template***.
  - It works as ***standalone***. No jQuery or other libs needed.
  - It respects the users ***privacy***.
+ - Any additional JavaScript code is optional.
 
 
 ## Installation
@@ -26,7 +27,8 @@ Just another social sharing plugin. Yeah o.O ... but here are the pros!
 Take a look at this [online demo example](https://s-a.github.io/look-at-this/dist)
 
 ## Set networks order and visibilty
-An available list is stored in ```window.socialIcons.networks``` (Array of string). Simply set up a ```"data-networks"``` attribute at the ```#social-icons``` container to define order and visibilty of share buttons.
+To get an orverview an available list is stored in ```window.socialIcons.networks``` (Array of string).  
+Simply set up a ```"data-networks"``` attribute at the ```#social-icons``` container to define order and visibilty of share buttons. For example ```data-networks="email,googleplus,facebook,github,hackernews"```
 
 ## Change share url, title and so on?
 By default the settings are stored like this:

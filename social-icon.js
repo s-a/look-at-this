@@ -66,8 +66,8 @@
 				templateData.icons.push({name:icon.name});
 			}
 		}
-		//if container.
-		debugger;
+
+
 		var tpl = "social_icon_template";
 		if (!document.getElementById(tpl)){
 			tpl = [];
@@ -133,7 +133,7 @@
     	processLinks(container);
 	});
 
-
+	// default configuration
 	if (!window.socialIcons.setup){
 		window.socialIcons.setup = {
 			"title":document.title,

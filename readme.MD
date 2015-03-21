@@ -24,10 +24,12 @@ Just another social sharing plugin. Yeah o.O ... but here are the pros!
  - Add a social-icons template called ```#social_icon_template``` (OPTIONAL)
  - Done :0)
 
-Take a look at this [online demo example](https://s-a.github.io/look-at-this/dist)
+Take a look at the example at 
+ - https://s-a.github.io/look-at-this/dist (default setup)
+ - https://s-a.github.io/look-at-this/index.html
 
-## Set networks order and visibilty
-To get an orverview an available list is stored in ```window.socialIcons.networks``` (Array of string).  
+## Config networks order and visibility
+To get an overview an available list is stored in ```window.socialIcons.networks``` (Array of string).  
 Simply set up a ```"data-networks"``` attribute at the ```#social-icons``` container to define order and visibilty of share buttons. For example ```data-networks="email,googleplus,facebook,github,hackernews"```
 
 ## Change share url, title and so on?
@@ -42,9 +44,34 @@ By default the settings are stored like this:
 ```
 So you can set them to what you need. This informations are masked per social network in the url property at [.scream.js](https://github.com/s-a/look-at-this/blob/master/ico/.scream.js#L22) for library build. The buildjob bundles them to ```window.socialIcons.list```. 
 
+## Custom style
+Thera are only two CSS classes to style button layout ```social-share-button``` and ```social-icon```. 
+
+## Custom Template
+The outout of share buttons are base on a simple template. If you need a custom template add a script block lile the following to your HTML code.
+``` html
+	<script type="text/html" id="social_icon_template">
+	  <% for ( var i = 0; i < icons.length; i++ ) { %>
+		<a class="social-share-button" href="#share/<%=icons[i].name%>" target="_blank">
+	 		<div class="social-icon social-icon-<%=icons[i].name%>"></div>
+		</a>
+	  <% } %>
+	</script>
+``` 
+
 
 ## Responsive showcase
 [![Responsive showcase](responsive-showcase.gif)](https://s-a.github.io/look-at-this/dist)
+
+
+## Contributing
+
+ - Fork it!
+ - Create your feature branch: `git checkout -b my-new-feature`
+ - Commit your changes: `git commit -am 'Add some feature'`
+ - Run the tests: `npm test`
+ - Push to the branch: `git push origin my-new-feature`
+ - Submit a pull request :D
 
 
 ## How to add a brand?
@@ -57,14 +84,6 @@ So you can set them to what you need. This informations are masked per social ne
  - execute ```grunt build```
 
 
-## Contributing
-
- - Fork it!
- - Create your feature branch: `git checkout -b my-new-feature`
- - Commit your changes: `git commit -am 'Add some feature'`
- - Run the tests: `npm test`
- - Push to the branch: `git push origin my-new-feature`
- - Submit a pull request :D
 
 
 ## License

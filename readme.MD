@@ -20,11 +20,11 @@ Just another social sharing plugin. Yeah o.O ... but here are the pros!
  - ```npm install look-at-this``` or ```bower install look-at-this```
  - Import the assets
  - Add a container for the icons called ```#social-icons```
- - Setup the socail icon settings
+ - Setup the social icon settings
  - Add a social-icons template called ```#social_icon_template``` (OPTIONAL)
  - Done :0)
 
-Take a look at the example at 
+Take a look at examples at 
  - https://s-a.github.io/look-at-this/dist (default setup)
  - https://s-a.github.io/look-at-this/index.html
 

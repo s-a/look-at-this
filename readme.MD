@@ -10,18 +10,20 @@ Just another social sharing plugin. Yeah o.O ... but here are the pros!
  - It is realy realy ***lightweight***. (You only need a css and js file)
  - It is ***responsive***.
  - ***Customizable link button CSS and template***.
- - It works as ***standalone***. No jQuery or other libs needed.
+ - It works as ***stand-alone***. No jQuery or other libs needed.
  - It respects the users ***privacy***.
- - Any additional JavaScript code is optional.
+ - Any additional JavaScript and CSS code is optional.
 
+
+## Responsive showcase
+[![Responsive showcase](responsive-showcase.gif)](https://s-a.github.io/look-at-this/dist)
 
 ## Installation
 
  - ```npm install look-at-this``` or ```bower install look-at-this```
  - ***Import the assets***
  - ***Add a container*** for the icons called ```#social-icons```
- - Setup the social icon settings (OPTIONAL)
- - Add a social-icons template called ```#social_icon_template``` (OPTIONAL)
+
 
 Take a look at examples at 
  - https://s-a.github.io/look-at-this/dist (default setup)
@@ -44,10 +46,10 @@ By default the settings are stored like this:
 So you can set them to what you need. This informations are masked per social network in the url property at [.scream.js](https://github.com/s-a/look-at-this/blob/master/ico/.scream.js#L22) for library build. The buildjob bundles them to ```window.socialIcons.list```. 
 
 ## Custom style
-Thera are only two CSS classes to style button layout ```social-share-button``` and ```social-icon```. 
+There are only two CSS classes to style button layout ```.social-share-button``` and ```.social-icon```. 
 
 ## Custom Template
-The outout of share buttons are base on a simple template. If you need a custom template add a script block lile the following to your HTML code.
+The output of share buttons are base on a simple template. If you need a custom template add a script block like the following to your HTML code.
 ``` html
 	<script type="text/html" id="social_icon_template">
 	  <% for ( var i = 0; i < icons.length; i++ ) { %>
@@ -57,10 +59,6 @@ The outout of share buttons are base on a simple template. If you need a custom 
 	  <% } %>
 	</script>
 ``` 
-
-
-## Responsive showcase
-[![Responsive showcase](responsive-showcase.gif)](https://s-a.github.io/look-at-this/dist)
 
 
 ## Contributing
@@ -81,9 +79,6 @@ The outout of share buttons are base on a simple template. If you need a custom 
  - execute ```scream .scream.js --build```
  - execute ```node bundle.js```
  - execute ```grunt build```
-
-
-
 
 ## License
 MIT and GPL

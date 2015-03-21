@@ -17,7 +17,15 @@ Just another social sharing plugin. Yeah o.O ... but here are the pros!
 ## Installation
 
  - ```npm install look-at-this``` or ```bower install look-at-this```
- - Take a look at this [online demo example](https://s-a.github.io/look-at-this/dist)
+ - Import the assets
+ - Add a container for the icons called ```social-icons```
+ - Setup the socail icon settings
+ - Add a social-icons template called ```social_icon_template``` (OPTIONAL)
+ - Done :0)
+
+Take a look at this [online demo example](https://s-a.github.io/look-at-this/dist)
+
+## Set the visible social networks and order
 
 
 ## Change share url, title and so on?
@@ -30,7 +38,7 @@ By default the settings are stored like this:
 		};
 	}
 ```
-So you can set them to what you need. This informations are masked per social network in the url property at [.scream.js](https://github.com/s-a/look-at-this/blob/master/ico/.scream.js#L22)
+So you can set them to what you need. This informations are masked per social network in the url property at [.scream.js](https://github.com/s-a/look-at-this/blob/master/ico/.scream.js#L22) for library build. The buildjob bundles them to ```window.socialIcons.list```. 
 
 
 ## Responsive showcase

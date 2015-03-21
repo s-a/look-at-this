@@ -80,8 +80,18 @@ The output of share buttons are base on a simple template. If you need a custom 
  - execute ```node bundle.js```
  - execute ```grunt build```
 
+## Should I add a brand?
+
+Indeed! You can help to make this repo a place containing a well equipped place of share links for social networks.
+
+
 ## License
+
 MIT and GPL
+
+## Legal
+
+In short, the used logos are registered trademarks and represent only the Companies. They should not be used to represent your products. You may also read the official legal terms of each company.
 
 ## Credits
 

@@ -67,8 +67,18 @@
 			}
 		}
 		//if container.
-		
-		container.innerHTML = tmpl("social_icon_template", templateData);
+		debugger;
+		var tpl = "social_icon_template";
+		if (!document.getElementById(tpl)){
+			tpl = [];
+			tpl.push('  <% for ( var i = 0; i < icons.length; i++ ) { %>');
+			tpl.push('	<a class="social-share-button" href="#share/<%=icons[i].name%>" target="_blank">');
+			tpl.push(' 		<div class="social-icon social-icon-<%=icons[i].name%>"></div>');
+			tpl.push('	</a>');
+			tpl.push('  <% } %>');
+			tpl = tpl.join("\n");
+		}
+		container.innerHTML = tmpl(tpl, templateData);
 		return container;
 	}
 
@@ -80,7 +90,7 @@
 		}
 	};
 
-	var consfigureLink = function(link, setup) {
+	var configureLink = function(link, setup) {
 	    var url = setup.url;
 	    var pattern = /\{\{([^}]+)\}\}/g;
 	    var match;
@@ -108,7 +118,7 @@
 	                }
 	                btn.href = window.socialIcons.setup.githubUrl
 	            } else {
-	                consfigureLink(btn, cfg)
+	                configureLink(btn, cfg)
 	            }
 	        } else {
 	            console.error("no valid share url found", cfg)

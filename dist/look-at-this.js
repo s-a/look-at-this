@@ -3,7 +3,7 @@ window.socialIcons={};window.socialIcons.list=[{"name":"delicious","color":"#327
 // John Resig - http://ejohn.org/ - MIT Licensed
 (function(){
 	var cache = {};
-
+	var i;
 	var tmpl = function tmpl(str, data){
 	  // Figure out if we're getting a template, or if we need to
 	  // load the template - and be sure to cache the result.
@@ -48,53 +48,93 @@ window.socialIcons={};window.socialIcons.list=[{"name":"delicious","color":"#327
 		return false;
 	};
 
-
-	//?v=5&provider={your-company}&noui&jump=close&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)
-
-	window.addEventListener("load", function load(event){
-		var i;
+	var renderTemplateData = function() {
+		var container = document.getElementById("social-icons");
 		var templateData = {icons:[]};
 
+		var customNetworkList = container.getAttribute("data-networks");
+
+		if (customNetworkList){
+			customNetworkList = customNetworkList.split(",");
+			for (i = 0; i < customNetworkList.length; i++) {
+				var nw = customNetworkList[i];
+				nw = getIconSetup(nw);
+				templateData.icons.push({name:nw.name});
+			}
+		} else {
+			for (i = 0; i < window.socialIcons.list.length; i++) {
+				var icon = window.socialIcons.list[i];
+				templateData.icons.push({name:icon.name});
+			}
+		}
+
+
+		var tpl = "social_icon_template";
+		if (!document.getElementById(tpl)){
+			tpl = [];
+			tpl.push('  <% for ( var i = 0; i < icons.length; i++ ) { %>');
+			tpl.push('	<a class="social-share-button" href="#share/<%=icons[i].name%>" target="_blank">');
+			tpl.push(' 		<div class="social-icon social-icon-<%=icons[i].name%>"></div>');
+			tpl.push('	</a>');
+			tpl.push('  <% } %>');
+			tpl = tpl.join("\n");
+		}
+		container.innerHTML = tmpl(tpl, templateData);
+		return container;
+	}
+
+	var initSocialNetworkList = function() {
+		window.socialIcons.networks = [];
 		for (i = 0; i < window.socialIcons.list.length; i++) {
 			var icon = window.socialIcons.list[i];
-			templateData.icons.push({name:icon.name});
+			window.socialIcons.networks.push(icon.name);
 		}
-		
-		var results = document.getElementById("social-icons");
-		results.innerHTML = tmpl("social_icon_template", templateData);
-    	var elems = results.getElementsByTagName('a');
-    	for (i = 0; i < elems.length; i++) {
-    		var btn = elems[i];
-    		var brandName = btn.href.split("#")[1].split("/")[1];
-    		var cfg = getIconSetup(brandName);
+	};
 
-    		if (cfg.url){
-    			if (brandName === "github"){
-    				btn.href = window.socialIcons.setup.githubUrl;
-    			} else {
-	    			var url = cfg.url;
-					var pattern = /\{\{([^}]+)\}\}/g;
-					var match;
-					while ((match = pattern.exec(cfg.url)) !== null){
-						var parmName = match[1];
-						var parmValue = window.socialIcons.setup[parmName];
-						if (!parmValue){
-							parmValue = "";
-						}
-						url = url.replace("{{" + parmName + "}}", encodeURIComponent(parmValue));
-					}
+	var configureLink = function(link, setup) {
+	    var url = setup.url;
+	    var pattern = /\{\{([^}]+)\}\}/g;
+	    var match;
+	    while ((match = pattern.exec(setup.url)) !== null) {
+	        var parmName = match[1];
+	        var parmValue = window.socialIcons.setup[parmName];
+	        if (!parmValue) {
+	            parmValue = ""
+	        }
+	        url = url.replace("{{" + parmName + "}}", encodeURIComponent(parmValue))
+	    }
+	    link.href = url;
+	}
 
-	    			btn.href = url;
-	    			//btn.onclick = onShareButtonClickEvent;
+	function processLinks(container) {
+	    var elems = container.getElementsByTagName("a");
+	    for (i = 0; i < elems.length; i++) {
+	        var btn = elems[i];
+	        var brandName = btn.href.split("#")[1].split("/")[1];
+	        var cfg = getIconSetup(brandName);
+	        if (cfg.url) {
+	            if (brandName === "github") {
+	                if (!window.socialIcons.setup.githubUrl) {
+	                    console.error("no valid window.socialIcons.setup.githubUrl found", cfg)
+	                }
+	                btn.href = window.socialIcons.setup.githubUrl
+	            } else {
+	                configureLink(btn, cfg)
+	            }
+	        } else {
+	            console.error("no valid share url found", cfg)
+	        }
+	    }
+	}
 
-    			}
-    		} else { 
-    			console.error("no valid share url found", cfg);
-    		}
-    	}
-		//results.social-share-button
+	initSocialNetworkList();
+
+	window.addEventListener("load", function load(event){
+		var container = renderTemplateData();
+    	processLinks(container);
 	});
 
+	// default configuration
 	if (!window.socialIcons.setup){
 		window.socialIcons.setup = {
 			"title":document.title,

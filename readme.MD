@@ -82,7 +82,7 @@ The output of share buttons are base on a simple template. If you need a custom 
 
 ## Should I add a brand?
 
-Indeed! You can help to make this repo a place containing a well equipped place of share links for social networks.
+Indeed! You can help to make this repo a place containing a well equipped list of share links for social networks.
 
 
 ## License

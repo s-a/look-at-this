@@ -18,15 +18,15 @@ Just another social sharing plugin. Yeah o.O ... but here are the pros!
 
  - ```npm install look-at-this``` or ```bower install look-at-this```
  - Import the assets
- - Add a container for the icons called ```social-icons```
+ - Add a container for the icons called ```#social-icons```
  - Setup the socail icon settings
- - Add a social-icons template called ```social_icon_template``` (OPTIONAL)
+ - Add a social-icons template called ```#social_icon_template``` (OPTIONAL)
  - Done :0)
 
 Take a look at this [online demo example](https://s-a.github.io/look-at-this/dist)
 
-## Set the visible social networks and order
-
+## Set networks order and visibilty
+An available list is stored in ```window.socialIcons.networks``` (Array of string). Simply set up a ```"data-networks"``` attribute at the ```#social-icons``` container to define order and visibilty of share buttons.
 
 ## Change share url, title and so on?
 By default the settings are stored like this:

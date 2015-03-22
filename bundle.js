@@ -8,6 +8,7 @@ var css = [];
 
 var count = 0;
 for (var x in cfg.images) {
+	console.log(x);
 	count++;
 }
 

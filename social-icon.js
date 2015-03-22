@@ -41,12 +41,12 @@
 		}
 		throw "Icon setup " + name + " not found";
 	};
-
+/*
 	var onShareButtonClickEvent = function() {
 		window.open(this.href);
 		return false;
 	};
-
+*/
 	var renderTemplateData = function() {
 		var container = document.getElementById("social-icons");
 		var templateData = {icons:[]};

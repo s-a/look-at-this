@@ -63,6 +63,7 @@
     "shadow"        : false,
     "supernew"      : false,
     "undef"         : true,
+    "unused"         : true,
 
 
 
@@ -74,6 +75,6 @@
     "plusplus"      : false,
     "sub"           : false,
     "trailing"      : true,
-    "white"         : false,
+    "white"         : true,
     "indent"        : 2
 }

@@ -20,7 +20,7 @@ for (var fn in cfg.images) {
 
 	percent += onePercent;
 	css.push(".social-icon-"+cls+"{");
-	css.push("	background-position-y:"+percent+"%;");
+	css.push("	background-position:0 " + percent + (percent === 0 ? "" : "%") + ";");
 	if (cfg.images[fn].color){
 		css.push("	background-color:"+ (cfg.images[fn].color || "yellow") + ";");
 	}

@@ -4,7 +4,7 @@ window.socialIcons={};window.socialIcons.list=[{"name":"delicious","color":"#327
 (function(){
 	var cache = {};
 	var i;
-	var tmpl = function tmpl(str, data){
+	var tmpl = function(str, data){
 	  // Figure out if we're getting a template, or if we need to
 	  // load the template - and be sure to cache the result.
 	  var fn = !/\W/.test(str) ?
@@ -42,12 +42,12 @@ window.socialIcons={};window.socialIcons.list=[{"name":"delicious","color":"#327
 		}
 		throw "Icon setup " + name + " not found";
 	};
-
+/*
 	var onShareButtonClickEvent = function() {
 		window.open(this.href);
 		return false;
 	};
-
+*/
 	var renderTemplateData = function() {
 		var container = document.getElementById("social-icons");
 		var templateData = {icons:[]};
@@ -129,7 +129,7 @@ window.socialIcons={};window.socialIcons.list=[{"name":"delicious","color":"#327
 
 	initSocialNetworkList();
 
-	window.addEventListener("load", function load(event){
+	window.addEventListener("load", function load(){
 		var container = renderTemplateData();
     	processLinks(container);
 	});

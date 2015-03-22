@@ -128,7 +128,7 @@
 
 	initSocialNetworkList();
 
-	window.addEventListener("load", function load(event){
+	window.addEventListener("load", function load(){
 		var container = renderTemplateData();
     	processLinks(container);
 	});

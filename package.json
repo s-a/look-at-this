@@ -3,7 +3,7 @@
   "preferGlobal": false,
   "name": "look-at-this",
   "description": "A very simple collection and lib of social sharing channels",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "repository": {
     "type": "git",
     "url": "https://github.com/s-a/look-at-this"

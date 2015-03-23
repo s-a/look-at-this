@@ -153,15 +153,6 @@ var config = {
 		color:"#EF4056",
 
 	},*/
-	"posterous-128.png" : {							// alias
-		filename : __dirname + "/posterous-128.png",				// original filename
-		sprite: "social-icon",										// determines if the image should be included within specified sprite sheet
-		batch : [											// image processing shell scripts with paramters
-			"-resize", "x128"								// -size width[xheight][+offset]
-		],
-		color:"red",
-		url :"http://posterous.com/share?linkto={{url}}"
-	},
 	"reddit-128.png" : {							// alias
 		filename : __dirname + "/reddit-128.png",				// original filename
 		sprite: "social-icon",										// determines if the image should be included within specified sprite sheet

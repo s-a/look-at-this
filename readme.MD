@@ -34,23 +34,8 @@ To get an overview an available list is stored in ```window.socialIcons.networks
 Simply set up a ```"data-networks"``` attribute at the ```#social-icons``` container to define order and visibilty of share buttons. For example ```data-networks="email,googleplus,facebook,github,hackernews"```
 
 ## Change share url, title and so on?
-By default the settings are stored like this:
+By default the settings are stored like this. Each property can be a function.
 ```
-	if (!window.socialIcons.setup){
-		window.socialIcons.setup = {
-			"title":document.title,
-			"url":location.href
-		};
-	}
-```
-So you can set them to what you need. This informations are masked per social network in the url property at [.scream.js](https://github.com/s-a/look-at-this/blob/master/ico/.scream.js#L22) for library build. The buildjob bundles them to ```window.socialIcons.list```. 
-
-## Custom style
-There are only two CSS classes to style button layout ```.social-share-button``` and ```.social-icon```. 
-
-## Custom Template
-The output of share buttons are base on a simple template. If you need a custom template add a script block like the following to your HTML code.
-``` html
 	// default configuration
 	if (!window.socialIcons.setup){
 		window.socialIcons.setup = {
@@ -62,6 +47,22 @@ The output of share buttons are base on a simple template. If you need a custom 
 			}
 		};
 	}
+```
+So you can set them to what you need. This informations are masked per social network in the url property at [.scream.js](https://github.com/s-a/look-at-this/blob/master/ico/.scream.js#L22) for library build. The buildjob bundles them to ```window.socialIcons.list```. 
+
+## Custom style
+There are only two CSS classes to style button layout ```.social-share-button``` and ```.social-icon```. 
+
+## Custom Template
+The output of share buttons are base on a simple template. If you need a custom template add a script block like the following to your HTML code.
+``` html
+	<script type="text/html" id="social_icon_template">
+	  <% for ( var i = 0; i < icons.length; i++ ) { %>
+		<a class="social-share-button" href="#share/<%=icons[i].name%>" target="_blank">
+	 		<div class="social-icon social-icon-<%=icons[i].name%>"></div>
+		</a>
+	  <% } %>
+	</script>
 ``` 
 
 

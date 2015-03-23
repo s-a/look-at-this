@@ -31,12 +31,22 @@ module.exports = function(grunt) {
 		},
 
 		copy: {
-			default: {
+			dist: {
 				files: [
 					{
 						expand: true,
 						src: ["sprite__social-icon.png"],
 						dest: "./dist",
+						flatten: false
+					}
+				]
+			},
+			sprite: {
+				files: [
+					{
+						expand: false,
+						src: ["./scream/sprite__social-icon.png"],
+						dest: "./sprite__social-icon.png",
 						flatten: false
 					}
 				]
@@ -85,6 +95,13 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		exec: {
+			sprite:{
+				cmd: function() {
+			        return 'scream ./ico/.scream.js --build'
+			    }
+			}
+		}
 	});
 
 
@@ -94,16 +111,23 @@ module.exports = function(grunt) {
 
 	// Default Production Build task(s).
 	grunt.registerTask(
-		'default', [
+		'build', [
 			'jshint',
 			'clean:build',
 			'concat',
 			'uglify',
 			'cssmin',
-			'copy',
+			'copy:dist',
 			'bump'
 		]
 	);
+	grunt.registerTask(
+		'prepare', [
+//			'exec:sprite',
+			'copy:sprite'
+		]
+	);
 
-	grunt.registerTask("build", ['default']);
+	grunt.registerTask("default", ["prepare", "build"]);
+	/*grunt.registerTask("prepare", ["prepare"]);*/
 };

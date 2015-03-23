@@ -25,6 +25,7 @@
     "grunt-contrib-uglify":"",
     "grunt-contrib-jshint":"",
     "grunt-contrib-concat": "0.3.0",
-    "grunt-contrib-cssmin": "0.9.0"
+    "grunt-contrib-cssmin": "0.9.0",
+    "grunt-exec": ""
   }
 }

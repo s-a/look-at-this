@@ -82,7 +82,8 @@ The output of share buttons are base on a simple template. If you need a custom 
  - Add the file entry to ```/ico/.scream.js```
  - execute ```scream .scream.js --build```
  - execute ```node bundle.js```
- - execute ```grunt build```
+ - execute ```grunt```
+ - execute ```npm test```
 
 ## Should I add a brand?
 

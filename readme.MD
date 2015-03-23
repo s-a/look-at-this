@@ -13,7 +13,7 @@ Just another social sharing plugin. Yeah o.O ... but here are the pros!
  - It works as ***stand-alone***. No jQuery or other libs needed.
  - It respects the users ***privacy***.
  - Any additional JavaScript and CSS code is optional.
-
+ - [Supported networks](./social-networks.MD)
 
 ## Responsive showcase
 [![Responsive showcase](responsive-showcase.gif)](https://s-a.github.io/look-at-this/dist)

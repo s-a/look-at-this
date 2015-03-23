@@ -96,7 +96,7 @@ var config = {
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
 		
-		url : "G" 
+		url : "needs_custom_setup!" 
 	},
 	"googleplus-128.png" : {							// alias
 		filename : __dirname + "/googleplus-128.png",				// original filename

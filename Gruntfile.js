@@ -100,6 +100,11 @@ module.exports = function(grunt) {
 				cmd: function() {
 			        return 'scream ./ico/.scream.js --build'
 			    }
+			},
+			bundle:{
+				cmd: function() {
+			        return 'node bundle.js'
+			    }
 			}
 		}
 	});
@@ -112,6 +117,7 @@ module.exports = function(grunt) {
 	// Default Production Build task(s).
 	grunt.registerTask(
 		'prepare', [
+			'exec:bundle',
 			'exec:sprite',
 			'copy:sprite'
 		]

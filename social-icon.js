@@ -97,6 +97,12 @@
 	    while ((match = pattern.exec(setup.url)) !== null) {
 	        var parmName = match[1];
 	        var parmValue = window.socialIcons.setup[parmName];
+	        if (parmName == "body"){
+	        	debugger;
+	        }
+	        if (typeof parmValue === "function"){
+	        	parmValue = parmValue();
+	        }
 	        if (!parmValue) {
 	            parmValue = ""
 	        }
@@ -136,10 +142,12 @@
 	// default configuration
 	if (!window.socialIcons.setup){
 		window.socialIcons.setup = {
-			"title":document.title,
-			"url":location.href,
-			"subject":"Look at this my friend",
-			"body":"Take a look at this website. It is awesome! " + location.href
+			title 	: document.title,
+			url 	: location.href,
+			subject : "Look at this my friend",
+			body 	: function(){
+				return "Take a look at this website. It is awesome! " + window.socialIcons.setup.url;
+			}
 		};
 	}
 

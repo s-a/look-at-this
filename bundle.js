@@ -19,7 +19,7 @@ var percent= onePercent*-1;
 var icons = [];
 for (var fn in cfg.images) {
 	if (cfg.images.hasOwnProperty(fn)) {
-		var cls = fn.replace("-128.png", "");
+		var cls = fn.replace("-128.png", "").split(".")[0];
 
 		percent += onePercent;
 		css.push(".social-icon-"+cls+"{");

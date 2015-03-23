@@ -89,9 +89,9 @@ var config = {
 		],
 		color:"#8CC63E"
 	},*/
-	"github-128.png" : {							// alias
-		filename : __dirname + "/github-128-black.png",				// original filename
-		sprite: "social-icon",										// determines if the image should be included within specified sprite sheet
+	"github-128.png" : {									// alias
+		filename : __dirname + "/github-128-black.png",		// original filename
+		sprite: "social-icon",								// determines if the image should be included within specified sprite sheet
 		batch : [											// image processing shell scripts with paramters
 			"-resize", "x128"								// -size width[xheight][+offset]
 		],
@@ -115,6 +115,15 @@ var config = {
 		],
 		color:"#FF6600",
 		url : "https://news.ycombinator.com/submitlink?u={{url}}&t={{title}}"
+	},
+	"echojs.png" : {										// alias
+		filename : __dirname + "/echojs.png",				// original filename
+		sprite: "social-icon",										// determines if the image should be included within specified sprite sheet
+		batch : [											// image processing shell scripts with paramters
+			"-resize", "x128"								// -size width[xheight][+offset]
+		],
+		color:"#AA0000",
+		url : "http://www.echojs.com/submit?t={{title}}&u={{url}}"
 	},
 	/*
 	"instagram-128.png" : {							// alias

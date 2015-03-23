@@ -97,9 +97,6 @@
 	    while ((match = pattern.exec(setup.url)) !== null) {
 	        var parmName = match[1];
 	        var parmValue = window.socialIcons.setup[parmName];
-	        if (parmName == "body"){
-	        	debugger;
-	        }
 	        if (typeof parmValue === "function"){
 	        	parmValue = parmValue();
 	        }

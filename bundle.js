@@ -19,8 +19,6 @@ var percent= onePercent*-1;
 var icons = [];
 var md = ["#Social Networks"];
 
-md.push("|Name|Url|");
-md.push("|-----------|");
 for (var fn in cfg.images) {
 	if (cfg.images.hasOwnProperty(fn)) {
 		var cls = fn.replace("-128.png", "").split(".")[0];
@@ -33,7 +31,7 @@ for (var fn in cfg.images) {
 		}
 		css.push("}");
 
-		md.push("|" + cls + "|" + cfg.images[fn].url + "|");
+		md.push(" - [" + cls + "](" + cfg.images[fn].url + ")");
 
 		var setup = cfg.images[fn];
 		icons.push({name:cls, color:setup.color, url: setup.url});

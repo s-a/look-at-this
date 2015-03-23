@@ -51,13 +51,17 @@ There are only two CSS classes to style button layout ```.social-share-button```
 ## Custom Template
 The output of share buttons are base on a simple template. If you need a custom template add a script block like the following to your HTML code.
 ``` html
-	<script type="text/html" id="social_icon_template">
-	  <% for ( var i = 0; i < icons.length; i++ ) { %>
-		<a class="social-share-button" href="#share/<%=icons[i].name%>" target="_blank">
-	 		<div class="social-icon social-icon-<%=icons[i].name%>"></div>
-		</a>
-	  <% } %>
-	</script>
+	// default configuration
+	if (!window.socialIcons.setup){
+		window.socialIcons.setup = {
+			title 	: document.title,
+			url 	: location.href,
+			subject : "Look at this my friend",
+			body 	: function(){
+				return "Take a look at this website. It is awesome! " + window.socialIcons.setup.url;
+			}
+		};
+	}
 ``` 
 
 

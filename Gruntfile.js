@@ -111,7 +111,14 @@ module.exports = function(grunt) {
 
 	// Default Production Build task(s).
 	grunt.registerTask(
-		'build', [
+		'prepare', [
+			'exec:sprite',
+			'copy:sprite'
+		]
+	);
+
+	grunt.registerTask(
+		'dist', [
 			'jshint',
 			'clean:build',
 			'concat',
@@ -121,13 +128,6 @@ module.exports = function(grunt) {
 			'bump'
 		]
 	);
-	grunt.registerTask(
-		'prepare', [
-//			'exec:sprite',
-			'copy:sprite'
-		]
-	);
 
-	grunt.registerTask("default", ["prepare", "build"]);
-	/*grunt.registerTask("prepare", ["prepare"]);*/
+	grunt.registerTask("build", ["prepare", "dist"]);
 };

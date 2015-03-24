@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 				createTag: true,
 				tagName: 'v%VERSION%',
 				tagMessage: 'Version %VERSION%',
-				push: true,
+				push: false,
 				pushTo: '',
 				gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d' // options to use with '$ git describe'
 			}
@@ -131,7 +131,7 @@ module.exports = function(grunt) {
 			'uglify',
 			'cssmin',
 			'copy:dist',
-			'bump'
+			//'bump'
 		]
 	);
 

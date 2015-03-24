@@ -2,8 +2,8 @@
 [![Build Status](http://img.shields.io/travis/s-a/look-at-this.svg?style=flat-square)](https://travis-ci.org/s-a/look-at-this)
 [![NPM Version](http://img.shields.io/npm/v/look-at-this.svg?style=flat-square)](https://www.npmjs.org/package/look-at-this)
 [![Bower](http://img.shields.io/bower/v/look-at-this.svg?style=flat-square)](http://bower.io/search/?q=look-at-this)
-[!(https://img.shields.io/david/s-a/look-at-this.svg)]
-[!(https://img.shields.io/david/dev/s-a/look-at-this.svg)]
+[![Dependencies](https://img.shields.io/david/s-a/look-at-this.svg)](#)
+[![Development Dependencies](https://img.shields.io/david/dev/s-a/look-at-this.svg)](#)
 [![Codacy Badge](https://www.codacy.com/project/badge/2d8ee24ff09c4ef09854ef29a7ffca75)](https://www.codacy.com/public/stephanahlf/look-at-this)
 
 

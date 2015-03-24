@@ -5,7 +5,10 @@
     "s-a <stephan.ahlf@googlemail.com>"
   ],
   "description": "A very simple collection and lib of social sharing channels",
-  "repository": "https://github.com/s-a/look-at-this/",
+  "repository": {
+    type:"git",
+    url: "git://github.com/s-a/look-at-this/"
+  },
   "license": "MIT & GPL",
   "private": false,
   "ignore": [

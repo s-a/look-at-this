@@ -6,8 +6,8 @@
   ],
   "description": "A very simple collection and lib of social sharing channels",
   "repository": {
-    type:"git",
-    url: "git://github.com/s-a/look-at-this/"
+    "type":"git",
+    "url": "git://github.com/s-a/look-at-this/"
   },
   "license": "MIT & GPL",
   "private": false,

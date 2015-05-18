@@ -81,7 +81,7 @@ window.socialIcons={};window.socialIcons.list=[{"name":"delicious","color":"#327
 		}
 		container.innerHTML = tmpl(tpl, templateData);
 		return container;
-	}
+	};
 
 	var initSocialNetworkList = function() {
 		window.socialIcons.networks = [];
@@ -102,12 +102,12 @@ window.socialIcons={};window.socialIcons.list=[{"name":"delicious","color":"#327
 	        	parmValue = parmValue();
 	        }
 	        if (!parmValue) {
-	            parmValue = ""
+	            parmValue = "";
 	        }
-	        url = url.replace("{{" + parmName + "}}", encodeURIComponent(parmValue))
+	        url = url.replace("{{" + parmName + "}}", encodeURIComponent(parmValue));
 	    }
 	    link.href = url;
-	}
+	};
 
 	function processLinks(container) {
 	    var elems = container.getElementsByTagName("a");
@@ -118,14 +118,14 @@ window.socialIcons={};window.socialIcons.list=[{"name":"delicious","color":"#327
 	        if (cfg.url) {
 	            if (brandName === "github") {
 	                if (!window.socialIcons.setup.githubUrl) {
-	                    console.error("no valid window.socialIcons.setup.githubUrl found", cfg)
+	                    console.error("no valid window.socialIcons.setup.githubUrl found", cfg);
 	                }
-	                btn.href = window.socialIcons.setup.githubUrl
+	                btn.href = window.socialIcons.setup.githubUrl;
 	            } else {
-	                configureLink(btn, cfg)
+	                configureLink(btn, cfg);
 	            }
 	        } else {
-	            console.error("no valid share url found", cfg)
+	            console.error("no valid share url found", cfg);
 	        }
 	    }
 	}

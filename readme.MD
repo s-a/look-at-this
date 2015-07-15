@@ -5,6 +5,7 @@
 [![Dependencies](https://img.shields.io/david/s-a/look-at-this.svg)](#)
 [![Development Dependencies](https://img.shields.io/david/dev/s-a/look-at-this.svg)](#)
 [![Codacy Badge](https://www.codacy.com/project/badge/2d8ee24ff09c4ef09854ef29a7ffca75)](https://www.codacy.com/public/stephanahlf/look-at-this)
+[![Donate](http://s-a.github.io/donate/donate.svg)](http://s-a.github.io/donate/)
 
 
 
